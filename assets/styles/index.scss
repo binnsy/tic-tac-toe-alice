@@ -1,1 +1,27 @@
 @import '~bootstrap/scss/bootstrap';
+
+// $alt-color: $cyan;
+// $body-bg-color: $black;
+$font-color: $white;
+
+body {
+  background-color: $black;
+  padding: 20px;
+}
+
+div {
+  align-items: center;
+  background-color: $secondary;
+  border: 10px solid $black;
+  color: $font-color;
+  display: flex;
+  flex: auto;
+  height: 200px;
+  justify-content: center;
+  margin: 12px transparent;
+
+}
+
+h1 {
+  color: $font-color;
+}
