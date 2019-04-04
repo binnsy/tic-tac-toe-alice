@@ -5,7 +5,9 @@
 
 // use require without a reference to ensure a file is bundled
 // require('./example')
+// Events file is located up a level in auth folder
+const events = require('./games/events.js')
 
 $(() => {
-  // your JS code goes here
+  events.addHandlers()
 })
