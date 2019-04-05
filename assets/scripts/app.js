@@ -7,7 +7,9 @@
 // require('./example')
 // Events file is located up a level in auth folder
 const events = require('./games/events.js')
+const userEvents = require('./auth/events.js')
 
 $(() => {
   events.addHandlers()
+  userEvents.addHandlers()
 })
