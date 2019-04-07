@@ -5,10 +5,12 @@ const store = require('../store')
 const signUpSuccess = function (data) {
   console.log('sign up success ran with the data: ', data)
   $('form').trigger('reset')
+  // $('#sign-in').show()
+  // $('#sign-up').hide()
 }
 
 const signUpFailure = function (data) {
-  $('#sign-up').text('We had difficulty signing you up! Try again.')
+  $('#sign-up').text('We had difficulty signing you up! Try again')
   $('form').trigger('reset')
   console.log('sign up failure ran with the data: ', data)
 }
@@ -16,9 +18,10 @@ const signUpFailure = function (data) {
 const signInSuccess = function (data) {
   $('#sign-in').text('Congrats you have successfully signed in!')
   console.log('sign in success ran with the data: ', data)
-
   store.user = data.user
+  console.log(store)
   $('form').trigger('reset')
+  // $('#sign-up').hide()
 }
 
 const signInFailure = function (data) {
@@ -42,14 +45,16 @@ const changePasswordFailure = function (data) {
 }
 
 const signOutSuccess = function (data) {
-  $('#sign-out').text('Sign out success')
+  $('#sign-out').text('Sign out success!')
   console.log('Sign out successful!', data)
   $('form').trigger('reset')
+  // $('#sign-in').show()
+  // $('#change-password').hide()
   store.user = null
 }
 
 const signOutFailure = function (data) {
-  $('#sign-out').text('Change password failure')
+  $('#sign-out').text('How about we try signing out again. Looks like something went wrong.')
   console.log('Sign out fail!')
   // console.log('sign up failure ran with the data: ', data)
   $('form').trigger('reset')

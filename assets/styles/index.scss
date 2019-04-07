@@ -19,7 +19,14 @@ body {
   height: 200px;
   justify-content: center;
   margin: 12px transparent;
+}
 
+nav {
+  background-color: $secondary;
+}
+
+#message {
+  color: $font-color;
 }
 
 h1 {

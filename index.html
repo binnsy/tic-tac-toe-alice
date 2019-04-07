@@ -14,29 +14,33 @@
     <body>
 
     <nav>
+
     <form id="sign-up">
       <input type="text" name="credentials[email]" placeholder="Email">
       <input type="text" name="credentials[password]" placeholder="Password">
       <input type="text" name="credentials[password_confirmation]" placeholder="Password Password Confirmation">
       <input type="submit" value="Sign Up!">
+      <input type="reset" value="Reset">
     </form>
 
     <form id="sign-in">
       <input type="text" name="credentials[email]" placeholder="Email" required>
       <input type="password" name="credentials[password]" placeholder="Password">
-      <input type="checkbox" onclick="myFunction()">Show Password
       <input type="submit" value="Sign In!">
+      <input type="reset" value="Reset">
     </form>
 
     <form id="change-password">
       <input type="text" name="passwords[old]" placeholder="old password">
       <input type="text" name="passwords[new]" placeholder="new password">
       <input type="submit" value="change-password">
+      <input type="reset" value="Reset">
     </form>
 
     <form id="sign-out">
       <input type="submit" value="Sign-Out!">
     </form>
+
     </nav>
 
       <h1 class="game-name">Tic-Tac-Toe</h1>
@@ -52,9 +56,18 @@
           <div data-index="6" class="box col-sm-4 col-md-4 col-lg-4"></div>
           <div data-index="7" class="box col-sm-4 col-md-4 col-lg-4"></div>
           <div data-index="8" class="box col-sm-4 col-md-4 col-lg-4"></div>
+          <form id="reset">
+          <input type="reset" value="Reset!">
+          </form>
       </div>
       <div class="row">
+
       <button id="newGame">New Game</button>
       </div>
+      <div class="row">
+        <h3>See How many games you have played<h3>
+      <button id="getGames">Games Played</button>
+      </div>
+      <div id="message"></div>
     </body>
 </html>

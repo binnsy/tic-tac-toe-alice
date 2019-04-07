@@ -3,84 +3,112 @@ const getFormFields =
 require('./../../../lib/get-form-fields.js')
 const api = require('./api')
 const ui = require('./ui')
+const store = require('../store')
 
 // Define and create a gameBoard
-const gameBoard = ['', '', '', '', '', '', '', '', '']
+let gameBoard = ['', '', '', '', '', '', '', '', '']
 let currentPlayer = 'X'
+const game = gameBoard
 
 const onCheckWinningCombos = function () {
   if (gameBoard[0] === 'X' && gameBoard[1] === 'X' && gameBoard[2] === 'X') {
     console.log('X has won!')
-
+    ui.checkWinningCombosSuccessX()
+    $('.box').off('click', onTicTacToeClick)
   // return displayWinner
   } else if (gameBoard[3] === 'X' && gameBoard[4] === 'X' && gameBoard[5] === 'X') {
     console.log('X has won!')
+    ui.checkWinningCombosSuccessX()
+    $('.box').off('click', onTicTacToeClick)
 
   // return displayWinner
   } else if (gameBoard[6] === 'X' && gameBoard[7] === 'X' && gameBoard[8] === 'X') {
     console.log('X has won!')
+    ui.checkWinningCombosSuccessX()
+    $('.box').off('click', onTicTacToeClick)
 
   // return displayWinner
   } else if (gameBoard[0] === 'X' && gameBoard[4] === 'X' && gameBoard[8] === 'X') {
     console.log('X has won!')
+    ui.checkWinningCombosSuccessX()
+    $('.box').off('click', onTicTacToeClick)
 
   // return displayWinner
   } else if (gameBoard[0] === 'X' && gameBoard[3] === 'X' && gameBoard[6] === 'X') {
     console.log('X has won!')
+    ui.checkWinningCombosSuccessX()
+    $('.box').off('click', onTicTacToeClick)
 
   // return displayWinner
   } else if (gameBoard[1] === 'X' && gameBoard[4] === 'X' && gameBoard[7] === 'X') {
     console.log('X has won!')
+    ui.checkWinningCombosSuccessX()
+    $('.box').off('click', onTicTacToeClick)
 
   // return displayWinner
   } else if (gameBoard[2] === 'X' && gameBoard[5] === 'X' && gameBoard[8] === 'X') {
     console.log('X has won!')
+    ui.checkWinningCombosSuccessX()
+    $('.box').off('click', onTicTacToeClick)
 
   // return displayWinner
   } else if (gameBoard[2] === 'X' && gameBoard[4] === 'X' && gameBoard[6] === 'X') {
     console.log('X has won!')
+    ui.checkWinningCombosSuccessX()
+    $('.box').off('click', onTicTacToeClick)
 
   // return displayWinner
   } else if (gameBoard[0] === 'O' && gameBoard[1] === 'O' && gameBoard[2] === 'O') {
     console.log('O has won!')
+    ui.checkWinningCombosSuccessO()
+    $('.box').off('click', onTicTacToeClick)
 
     // return displayWinner
   } else if (gameBoard[3] === 'O' && gameBoard[4] === 'O' && gameBoard[5] === 'O') {
     console.log('O has won!')
+    currentPlayer = 'O'
+    ui.checkWinningCombosSuccessO()
+    $('.box').off('click', onTicTacToeClick)
 
     // return displayWinner
   } else if (gameBoard[6] === 'O' && gameBoard[7] === 'O' && gameBoard[8] === 'O') {
     console.log('O has won!')
+    ui.checkWinningCombosSuccessO()
+    $('.box').off('click', onTicTacToeClick)
 
     // return displayWinner
   } else if (gameBoard[0] === 'O' && gameBoard[4] === 'O' && gameBoard[8] === 'O') {
     console.log('O has won!')
+    ui.checkWinningCombosSuccessO()
+    $('.box').off('click', onTicTacToeClick)
 
     // return displayWinner
   } else if (gameBoard[0] === 'O' && gameBoard[3] === 'O' && gameBoard[6] === 'O') {
     console.log('O has won!')
+    ui.checkWinningCombosSuccessO()
+    $('.box').off('click', onTicTacToeClick)
 
     // return displayWinner
   } else if (gameBoard[1] === 'O' && gameBoard[4] === 'O' && gameBoard[7] === 'O') {
     console.log('O has won!')
+    ui.checkWinningCombosSuccessO()
+    $('.box').off('click', onTicTacToeClick)
 
     // return displayWinner
   } else if (gameBoard[2] === 'O' && gameBoard[5] === 'O' && gameBoard[8] === 'O') {
     console.log('O has won!')
+    ui.checkWinningCombosSuccessO()
+    $('.box').off('click', onTicTacToeClick)
 
     // return displayWinner
   } else if (gameBoard[2] === 'O' && gameBoard[4] === 'O' && gameBoard[6] === 'O') {
     console.log('O has won!')
+    ui.checkWinningCombosSuccessO()
+    $('.box').off('click', onTicTacToeClick)
     // return displayWinner
   } else {
+    onCheckDraw()
     console.log('no winner yet')
-
-    // const formData = getFormFields(event.target)
-
-    // api.onCheckWinningCombos(formData)
-    //   .then(ui.checkWinningCombosSuccess)
-    //   .catch(ui.checkWinningCombosFailure)
-    // console.log(onCheckWinningCombos)
   }
 }
 
@@ -88,68 +116,103 @@ const onCheckWinningCombos = function () {
 const onCheckDraw = function () {
   if (gameBoard[0] !== '' && gameBoard[1] !== '' && gameBoard[2] !== '' && gameBoard[3] !== '' && gameBoard[4] !== '' && gameBoard[5] !== '' && gameBoard[6] !== '' && gameBoard[7] !== '' && gameBoard[8] !== '' && gameBoard[9] !== '') {
     console.log('DRAW!')
+    ui.checkDrawSuccess()
   }
 }
-// const formData = getFormFields(event.target)
-
-//     api.onCheckDraw(formData)
-//       .then(ui.checkDrawSuccess)
-//       .catch(ui.checkDrawFailure)
-//     console.log(onCheckDraw)
-//   }
-// }
 
 const onCreateGame = function (event) {
   event.preventDefault()
+  $('.box').html('')
 
-  console.log('we need to start a new game!')
+  // function resetBoard() {
+  // $('#message').removeClass(currentPlayer + 'won')
+  //winner = 'null';
+  api.createGame()
+    .then(ui.createGameSuccess)
+    .catch(ui.createGameFailure)
+
+  gameBoard = ['', '', '', '', '', '', '', '', '']
+  currentPlayer = 'X'
+  onTicTacToeClick()
+  console.log(gameBoard)
 }
-  // const formData = getFormFields(event.target)
-  //
-  // api.onCreateGame(formData)
-  //   .then(ui.createGameSuccess)
-  //   .catch(ui.createGameFailure)
-// console.log(onCreateGame)
 
 // A click on the board returns the location of the click via the data-index
-const onTicTacToeClick = function (event) {
+const onTicTacToeClick = function (data) {
   event.preventDefault()
+  // console.log('you have to sign in')
 
-  // const formData = getFormFields(event.target)
   // create a click event that corresponds to the numbers on the board
   const index = $(event.target).data('index')
-  // console.log('click', index)
-
+  store.index = data.game
+  console.log(data.id)
+  // console.log(index)
   // store the click into the index with current player
   gameBoard[index] = currentPlayer
-  console.log(gameBoard)
-
+  // console.log(gameBoard)
+  store.game = data.game
+  store.game = index.game
+  console.log(data.game)
+  console.log(index.game)
   // Shows what is in the box or div
   const divText = $(event.target).text()
-  // console.log(divText)
-
   // If the box is empty, allow the current player to mark either an X or O
   if (divText === '') {
     $(event.target).text(currentPlayer)
-    // each turn requires a check of winning boxes as well as if it a draw
-    onCheckWinningCombos()
-    onCheckDraw()
     // current player starts with X, so if thats true, then change to O else stay X
     currentPlayer = currentPlayer === 'X' ? 'O' : 'X'
+    $('#message').text('It is ' + currentPlayer + 's turn!')
+
+    console.log(currentPlayer, 'turn')
+    onCheckWinningCombos()
+
+    api.ticTacToeClick(data)
+      .then(ui.ticTacToeClickSuccess)
+      .catch(ui.ticTacToeClickFailure)
   }
 }
-//
-//   api.ticTacToeClick(formData)
-//     .then(ui.ticTacToeClickSuccess)
-//     .catch(ui.ticTacToeClickFailure)
-//   console.log(onTicTacToeClick)
+  // } else if
+  // (divText !== '') {
+  //   $('#message').text('You cannot click there!')
+    // console.log('you cannot click there')
+    // ui.invalidChoice()
+    // onCheckWinningCombos === false && onCheckDraw === false
+    //   $('#message').text('It is now time for ' + currentPlayer + ' to make a move!')
+    // }
+    // each turn requires a check of winning boxes as well as if it a draw
+
+
+
+
+
+    // const data = getFormFields(event.target)
+    // const game = data.gameBoard
+    // console.log(data)
+  // } else {
+  // // (divText !== '') {
+  //   $('#message').text('You cannot click there!')
+    // game = store.gameBoard
+
+
+
+// const gameOver = function (event) {
+//   if (CheckWinningCombos() = true || onCheckDraw() = true || $('#reset').on('click', onCreateGame))
+//   console.log('game over', gameOver)
 // }
+
+const onGetGames = function (event) {
+  event.preventDefault()
+  const data = gameBoard
+  api.getGames(data)
+    .then(ui.getGamesSuccess)
+    .catch(ui.getGamesFailure)
+}
 
 const addHandlers = function () {
   $('.box').on('click', onTicTacToeClick)
-  $('#newGame').on('click', onCreateGame)
-  // $('.box').text('X', onTicTacToeClick)
-  // console.log(onTicTacToeClick)
+  $('#reset').on('click', onCreateGame)
+  $('#reset').click(gameBoard.reset)
+  $('#getGames').on('click', onGetGames)
 }
 
 module.exports = {
