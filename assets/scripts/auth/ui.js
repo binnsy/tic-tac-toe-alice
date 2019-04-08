@@ -3,7 +3,7 @@
 const store = require('../store')
 
 const signUpSuccess = function (data) {
-  $('#message').text('Congrats! You have signed up successfully. Click New Game to get started!')
+  $('#message').text('Congrats! You have signed up successfully. Now sign in to get started!')
   console.log('sign up success ran with the data: ', data)
   store.user = data.user
   // store.gameBoard = data.game
@@ -11,29 +11,34 @@ const signUpSuccess = function (data) {
   // $('#sign-in').show()
   // $('#sign-up').hide()
   $('#sign-up').hide()
-  $(".box").show()
-  $("#sign-out").show()
-  $("#reset").show()
-  $("#getGames").show()
+  $('.box').show()
+  $('#sign-out').show()
+  $('#reset').hide()
+  $('#getGames').show()
+  $('#sign-in').show()
+  $('#change-password').hide()
+
 }
 
 const signUpFailure = function (data) {
   $('#message').text('We had difficulty signing you up! Try again.')
   $('form').trigger('reset')
   console.log('sign up failure ran with the data: ', data)
+
 }
 
 const signInSuccess = function (data) {
-  $('#message').text('Congrats you have successfully signed in!')
+  $('#message').text('Congrats you have successfully signed in! Click Create New Game to get started!')
   console.log('sign in success ran with the data: ', data)
   store.user = data.user
   console.log('this is store', store)
   $('form').trigger('reset')
   $('#sign-up').hide()
-  $(".box").show()
-  $("#sign-out").show()
-  $("#reset").show()
-  $("#getGames").show()
+  $('.box').show()
+  $('#sign-out').show()
+  $('#reset').show()
+  $('#getGames').show()
+  $('#change-password').show()
 }
 
 const signInFailure = function (data) {
@@ -62,6 +67,9 @@ const signOutSuccess = function (data) {
   $('form').trigger('reset')
   $('#sign-in').show()
   $('#change-password').hide()
+  $('.row').hide()
+  $('#reset').hide()
+  $('#sign-out').hide()
   // $('#change-password').hide()
   store.user = null
 }
