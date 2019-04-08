@@ -8,13 +8,16 @@ const store = require('../store')
 // Define and create a gameBoard
 let gameBoard = ['', '', '', '', '', '', '', '', '']
 let currentPlayer = 'X'
-const game = gameBoard
+let game = store.gameBoard
+store.gameIsOver = false
 
 const onCheckWinningCombos = function () {
   if (gameBoard[0] === 'X' && gameBoard[1] === 'X' && gameBoard[2] === 'X') {
     console.log('X has won!')
     ui.checkWinningCombosSuccessX()
     $('.box').off('click', onTicTacToeClick)
+    // gameOver()
+    store.gameIsOver = true
   // return displayWinner
   } else if (gameBoard[3] === 'X' && gameBoard[4] === 'X' && gameBoard[5] === 'X') {
     console.log('X has won!')
@@ -120,40 +123,27 @@ const onCheckDraw = function () {
   }
 }
 
-const onCreateGame = function (event) {
-  event.preventDefault()
-  $('.box').html('')
 
-  // function resetBoard() {
-  // $('#message').removeClass(currentPlayer + 'won')
-  //winner = 'null';
-  api.createGame()
-    .then(ui.createGameSuccess)
-    .catch(ui.createGameFailure)
-
-  gameBoard = ['', '', '', '', '', '', '', '', '']
-  currentPlayer = 'X'
-  onTicTacToeClick()
-  console.log(gameBoard)
-}
 
 // A click on the board returns the location of the click via the data-index
 const onTicTacToeClick = function (data) {
   event.preventDefault()
   // console.log('you have to sign in')
-
+  // store.game = data.game
+  // console.log(data.game)
   // create a click event that corresponds to the numbers on the board
   const index = $(event.target).data('index')
-  store.index = data.game
-  console.log(data.id)
+  // store.index = data.game
+  // console.log(data.id)
   // console.log(index)
   // store the click into the index with current player
   gameBoard[index] = currentPlayer
-  // console.log(gameBoard)
-  store.game = data.game
-  store.game = index.game
-  console.log(data.game)
-  console.log(index.game)
+
+  console.log(gameBoard)
+  // store.game = data.game
+  // store.game = index.game
+  // console.log(data.gameBoard)
+  // console.log(data.game)
   // Shows what is in the box or div
   const divText = $(event.target).text()
   // If the box is empty, allow the current player to mark either an X or O
@@ -166,10 +156,37 @@ const onTicTacToeClick = function (data) {
     console.log(currentPlayer, 'turn')
     onCheckWinningCombos()
 
-    api.ticTacToeClick(data)
-      .then(ui.ticTacToeClickSuccess)
-      .catch(ui.ticTacToeClickFailure)
+    // api.ticTacToeClick(data)
+    //   .then(ui.ticTacToeClickSuccess)
+    //   .catch(ui.ticTacToeClickFailure)
   }
+}
+
+const onCreateGame = function (event) {
+  event.preventDefault()
+  $('.box').html('')
+  currentPlayer = 'X'
+  gameBoard = ['', '', '', '', '', '', '', '', '']
+
+  $('.box').on('click', onTicTacToeClick)
+  // store.game = data.game
+  // $('.box').html('')
+
+
+  // // function resetBoard() {
+  // // $('#message').removeClass(currentPlayer + 'won')
+  // //winner = 'null';
+  // $('.message').text('X can start the game!')
+  //
+
+  //
+  // onTicTacToeClick()
+  // console.log(gameBoard)
+  // api.createGame()
+    // .then(ui.createGameSuccess)
+    // .then(onTicTacToeClick())
+    // .catch(ui.createGameFailure)
+//     // ticTacToeClick()
 }
   // } else if
   // (divText !== '') {

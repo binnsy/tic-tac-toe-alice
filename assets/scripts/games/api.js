@@ -4,25 +4,24 @@ const config = require('../config')
 const store = require('../store')
 
 // Same as updateGame
-const ticTacToeClick = function (data) {
-  return $.ajax({
-    url: config.apiUrl + '/games/' + data.game.id,
-    method: 'PATCH',
-    headers: {
-      Authorization: 'Token token=' + store.user.token
-    },
-    data: {
-      'game': {
-        'cell': {
-          'index': store.index,
-          'value': store.currentPlayer
-        },
-        'over': {
-        }
-      }
-    }
-  })
-}
+// const ticTacToeClick = function (data) {
+//   return $.ajax({
+//     url: config.apiUrl + '/games/' + store.game.id,
+//     method: 'PATCH',
+//     headers: {
+//       Authorization: 'Token token=' + store.user.token
+//     },
+//     data: {
+//       'game': {
+//         'cell': {
+//           'index': store.index,
+//           'value': store.currentPlayer
+//         },
+//         'over': store.game.over
+//       }
+//     }
+//   })
+// }
 // {
 //       "game": {
 //         "cell": {
@@ -63,15 +62,15 @@ const ticTacToeClick = function (data) {
 //   })
 // }
 
-const getGames = function () {
-  return $.ajax({
-    url: config.apiUrl + '/games',
-    method: 'GET',
-    headers: {
-      Authorization: 'Token token=' + store.user.token
-    }
-  })
-}
+// const getGames = function () {
+//   return $.ajax({
+//     url: config.apiUrl + '/games',
+//     method: 'GET',
+//     headers: {
+//       Authorization: 'Token token=' + store.user.token
+//     }
+//   })
+// }
 
 const createGame = function (data) {
   return $.ajax({
@@ -105,7 +104,7 @@ const createGame = function (data) {
 // }
 
 module.exports = {
-  createGame,
-  ticTacToeClick,
-  getGames
+  createGame
+  // ticTacToeClick,
+  // getGames
 }
