@@ -154,6 +154,7 @@ const onCheckDraw = function () {
 
 const onCreateGame = function (event) {
   event.preventDefault()
+  $('.row').show()
   console.log('clicked on onCreateGame')
   // store.gameBoard = store.data
 // store.gameBoard = store.data
@@ -268,13 +269,15 @@ const onTicTacToeClick = function (data) {
 
 const onGetGames = function (event) {
   event.preventDefault()
-  const data = store.data
-  api.getGames(data)
+  //let user = store.user.token
+  // const data = store.data
+  api.getGames()
     .then(ui.getGamesSuccess)
     .catch(ui.getGamesFailure)
 }
 
 const addHandlers = function () {
+
   $('.box').on('click', onTicTacToeClick)
   $('#reset').on('click', onCreateGame)
   // $('#reset').click(gameBoard.reset)

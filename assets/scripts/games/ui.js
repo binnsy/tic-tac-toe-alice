@@ -101,12 +101,12 @@ const updateGameFailure = function (data) {
 }
 
 const getGamesSuccess = function (data) {
-  $('#getGames').text('You have played ' + store.gameBoard.id + ' games!')
+  $('#getGames').text('You have played ' + data.games.length + ' games!')
   console.log('Get games successful')
 }
 
 const getGamesFailure = function (data) {
-  $('#getGames').text('could not recieve number of games played')
+  $('#getGames').text('could not recieve games')
   console.log('could not get games')
 }
 // const createGameSuccess = function (event) {
