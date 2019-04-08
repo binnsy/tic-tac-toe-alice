@@ -23,4 +23,6 @@ Some of the technologies I used included:
 - JQuery
 - AJAX
 
-Although I came across many obstacles, was very frusterated at times, and bugged my code way more than I wanted, I enjoyed the process and learned a lot along the way. I accepted my frusteration and learned to be more patient. I learned to use console.log more and more throughout the project as then I was able to pinpoint exactly where I went wrong and express it in the queue more accuratly.  
+Some of the things I wish I could do would be work on styling with animation, hover, colors, etc. I would also like to create an AI player. Displaying something like individual wins as opposed to just total games would be nice too. There are so many features that would be fun to add!
+
+Although I came across many obstacles, was very frusterated at times, and bugged my code way more than I wanted, I enjoyed the process and learned a lot along the way. I accepted my frusteration and learned to be more patient. I learned to use console.log more and more throughout the project as then I was able to pinpoint exactly where I went wrong and express it in the queue more accuratly.
