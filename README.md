@@ -7,7 +7,7 @@ Our first project was to complete a single-page application of Tic-Tac-Toe from 
 
 I first wrote out the basic steps in my notebook along with drawing my wireframe of how I wanted it to look:
 
-![./ticTacToeWireFrame "Tic Tac Toe Wireframe"]
+![Wireframe](./ticTacToeWireFrame "Tic Tac Toe Wireframe")
 
 
 I then took that and typed it into a document where I entered noted about important project requirements. From there I created an official game-project-scope-study. I was able to do an initial pseudocode to map out the basics of the events. It was then I realized I had to teach the computer to do a lot more then just the basic instructions. I followed a schedule of steps that helped a lot, but I was stuck almost right away.
