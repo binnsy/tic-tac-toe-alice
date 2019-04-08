@@ -1,14 +1,18 @@
 
 const store = require('../store')
-const events = require('./events.js')
 
 const ticTacToeClickSuccess = function (data) {
+  store.gameBoard = data.game
+  console.log(data)
   // $('#message').text('You just clicked a box!')
   // store.game = data.game
   // store.game = index.game
-  console.log(data.game)
+  // store.game.id
+  // store.id = data.id
+  // console.log(id)
   // console.log(index.game)
-  console.log('click successful')
+
+  console.log('click successful' + data.gameBoard)
 }
 
 const ticTacToeClickFailure = function (data) {
@@ -38,11 +42,13 @@ const checkWinningCombosFailureO = function (data) {
 
 const createGameSuccess = function (data) {
   $('#message').text('New game has been created! X can start the game!')
-  store.game = data.game
-  console.log(data.game)
+  console.log('hi!!!!!!')
+  store.gameBoard = data.game
+  console.log(data)
   // gameBoard = ['', '', '', '', '', '', '', '', '']
   // $('.box').html('')
   // currentPlayer = 'X'
+  // $('.box').on('click', onTicTacToeClick)
   // // function resetBoard() {
   // // $('#message').removeClass(currentPlayer + 'won')
   // //winner = 'null';
@@ -95,12 +101,12 @@ const updateGameFailure = function (data) {
 }
 
 const getGamesSuccess = function (data) {
-  $('#getGames').text('recieve games')
-  console.log('getting games')
+  $('#getGames').text('You have played ' + store.gameBoard.id + ' games!')
+  console.log('Get games successful')
 }
 
 const getGamesFailure = function (data) {
-  $('#getGames').text('could not recieve games')
+  $('#getGames').text('could not recieve number of games played')
   console.log('could not get games')
 }
 // const createGameSuccess = function (event) {

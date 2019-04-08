@@ -13,3 +13,7 @@ $(() => {
   events.addHandlers()
   userEvents.addHandlers()
 })
+
+$(".box").hide()
+$("#reset").hide()
+$("#getGames").hide()

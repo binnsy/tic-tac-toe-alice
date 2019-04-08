@@ -7,6 +7,11 @@ const signUpSuccess = function (data) {
   $('form').trigger('reset')
   // $('#sign-in').show()
   // $('#sign-up').hide()
+  $('#sign-up').hide()
+  $(".box").show()
+  $("#sign-out").show()
+  $("#reset").show()
+  $("#getGames").show()
 }
 
 const signUpFailure = function (data) {
@@ -19,9 +24,13 @@ const signInSuccess = function (data) {
   $('#sign-in').text('Congrats you have successfully signed in!')
   console.log('sign in success ran with the data: ', data)
   store.user = data.user
-  console.log(store)
+  console.log('this is store', store)
   $('form').trigger('reset')
-  // $('#sign-up').hide()
+  $('#sign-up').hide()
+  $(".box").show()
+  $("#sign-out").show()
+  $("#reset").show()
+  $("#getGames").show()
 }
 
 const signInFailure = function (data) {
@@ -46,9 +55,9 @@ const changePasswordFailure = function (data) {
 
 const signOutSuccess = function (data) {
   $('#sign-out').text('Sign out success!')
-  console.log('Sign out successful!', data)
+  console.log('Sign out successful!')
   $('form').trigger('reset')
-  // $('#sign-in').show()
+  $('#sign-in').show()
   // $('#change-password').hide()
   store.user = null
 }
