@@ -101,7 +101,10 @@ const updateGameFailure = function (data) {
 }
 
 const getGamesSuccess = function (data) {
-  $('#getGames').text('You have played ' + data.games.length + ' games!')
+  $('#message2').text('You have played ' + data.games.length + ' games!')
+  setTimeout(function () {
+    $('#message2').fadeOut('slow')
+  }, 10000)
   console.log('Get games successful')
 }
 
