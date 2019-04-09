@@ -1,7 +1,5 @@
 @import '~bootstrap/scss/bootstrap';
 
-// $alt-color: $cyan;
-// $body-bg-color: $black;
 $font-color: $white;
 
 body {
@@ -17,9 +15,9 @@ body {
   display: flex;
   flex: auto;
   height: 200px;
-  width: 200px;
   justify-content: center;
   margin: 12px transparent;
+  width: 200px;
 }
 
 nav {
