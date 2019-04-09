@@ -16,4 +16,5 @@ $(() => {
   $('.box').hide()
   $('#reset').hide()
   $('#getGames').hide()
+  $('.row').hide()
 })
