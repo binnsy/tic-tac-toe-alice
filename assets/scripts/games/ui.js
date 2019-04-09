@@ -40,10 +40,12 @@ const checkDrawSuccess = function (data) {
 
 const playerXTurn = function (data) {
   $('#message').text('Player X turn')
+  // $('#message').css('color', 'blue')
 }
 
 const playerOTurn = function (data) {
   $('#message').text('Player O turn')
+  // $('#message').css('color', 'yellow')
 }
 
 const invalidChoice = function (data) {
@@ -64,6 +66,7 @@ const updateGameFailure = function (data) {
 
 const getGamesSuccess = function (data) {
   $('#message2').text('You have played ' + data.games.length + ' games!')
+  $('#message2').css('color', 'white')
   setTimeout(function () {
     $('#message2').fadeOut('slow')
   }, 10000)

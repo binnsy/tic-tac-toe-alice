@@ -18,10 +18,12 @@ const signUpSuccess = function (data) {
 const signUpFailure = function (data) {
   $('#message').text('We had difficulty signing you up! Try again.')
   $('form').trigger('reset')
+  // $('#message').css('color', 'red')
 }
 
 const signInSuccess = function (data) {
   $('#message').text('Congrats you have successfully signed in! Click Create New Game to get started!')
+  // $('#message').css('color', 'green')
   store.user = data.user
   $('form').trigger('reset')
   $('#sign-up').hide()
@@ -36,6 +38,8 @@ const signInSuccess = function (data) {
 const signInFailure = function (data) {
   $('#message').text('Sorry something went wrong! Please try again.')
   $('form').trigger('reset')
+  // $('#message').css('color', 'red')
+  $('#sign-up').show()
 }
 
 const changePasswordSuccess = function (data) {
@@ -45,7 +49,7 @@ const changePasswordSuccess = function (data) {
 
 const changePasswordFailure = function (data) {
   $('#message').text('Change password failure. Please try again.')
-  $('#message').css('color', 'red')
+  // $('#message').css('color', 'red')
   $('form').trigger('reset')
 }
 
