@@ -17,4 +17,5 @@ $(() => {
   $('#reset').hide()
   $('#getGames').hide()
   $('.row').hide()
+  $('#change-password').hide()
 })

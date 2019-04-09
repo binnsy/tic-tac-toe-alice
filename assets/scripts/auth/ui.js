@@ -12,7 +12,6 @@ const signUpSuccess = function (data) {
   $('#reset').hide()
   $('#getGames').show()
   $('#sign-in').show()
-  $('#change-password').hide()
 }
 
 const signUpFailure = function (data) {
@@ -57,10 +56,12 @@ const signOutSuccess = function (data) {
   $('#message').text('Sign out successful!')
   $('form').trigger('reset')
   $('#sign-in').show()
+  $('#sign-up').show()
   $('#change-password').hide()
   $('.row').hide()
   $('#reset').hide()
   $('#sign-out').hide()
+
   store.user = null
 }
 
