@@ -12,6 +12,7 @@ body {
   background-color: $secondary;
   border: 10px solid $black;
   color: $font-color;
+  font-size: 50px;
   display: flex;
   flex: auto;
   height: 200px;
@@ -20,14 +21,99 @@ body {
   width: 200px;
 }
 
+#getGames {
+  text-align: center;
+}
+
+#reset {
+  text-align: center;
+}
+
+.box1 {
+  background-image: url("https://www.conservation.org/SiteCollectionImages/ci_52272968.jpg?RenditionID=9");
+  background-size: cover;
+}
+
+.box2 {
+  background-image: url("https:www.colourbox.com/preview/1765174-wild-sea-aquatic-motion-from-birds-eye-view.jpg");
+  background-size: cover;
+}
+
+.box3 {
+  background-image: url("https://media.istockphoto.com/videos/underwater-view-of-ocean-wave-video-id607535354?s=640x640");
+  background-size: cover;
+}
+
+.box4 {
+  background-image: url("https://news.theceomagazine.com/wp-content/uploads/2019/03/sea-coast-water-ocean-horizon-cloud-937679-pxhere.com_.jpg");
+  background-size: cover;
+}
+
+.box5 {
+  background-image: url("https://previews.123rf.com/images/ranimirolotufoneto/ranimirolotufoneto1807/ranimirolotufoneto180700495/105983192-rippled-ocean-water-abstract-ocean-and-sea-water-texture.jpg");
+  background-size: cover;
+}
+
+.box6 {
+  background-image: url("http://www.wholesalesuppliesplus.com/Images/Products/2981-Ocean-Water-Fragrance.jpg");
+  background-size: cover;
+}
+
+.box7 {
+  background-image: url("https://cosmos-images2.imgix.net/file/spina/photo/12769/171114-npacific-full.jpg?ixlib=rails-2.1.4&auto=format&ch=Width%2CDPR&fit=max&w=835");
+  background-size: cover;
+}
+
+.box8 {
+  background-image: url("http://iodine.news/wp-content/uploads/sites/103/2017/08/Ocean-Water-Wave-Art-Blue-Concept-Dark.jpg");
+  background-size: cover;
+}
+
+.box9 {
+  background-image: url("https://i.pinimg.com/236x/79/b7/dc/79b7dcc1318ca0a24212fad7ab4a23c6.jpg");
+  background-size: cover;
+}
+
 nav {
-  background-color: $secondary;
+  background-color: #34495E;
 }
 
 #message {
-  color: $font-color;
+  color: #34495E;
+  font-size: 20px;
+  text-align: center;
 }
 
 h1 {
-  color: $font-color;
+  color: #34495E;
+  text-align: center;
+  padding: 10px;
+  font-size: 50px;
+}
+
+#sign-up {
+  text-align: center;
+  padding: 10px;
+
+}
+
+#sign-in {
+  text-align: center;
+  padding: 10px;
+}
+
+#sign-out {
+  text-align: center;
+  padding: 10px;
+}
+
+#change-password {
+  text-align: center;
+  padding: 10px;
+}
+
+#footer {
+  color: #34495E;
+  text-align: center;
+
 }
