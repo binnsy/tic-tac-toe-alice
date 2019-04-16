@@ -5,10 +5,12 @@ $font-color: $white;
 body {
   background-color: $black;
   padding: 20px;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .box {
   align-items: center;
+  font-family: 'Fredoka One', cursive;
   background-color: $secondary;
   border: 10px solid $black;
   color: $font-color;
@@ -23,65 +25,79 @@ body {
 
 #getGames {
   text-align: center;
+  color: #fa8072;
 }
 
 #reset {
   text-align: center;
+  font-size: 20px;
+  color: #fa8072;
 }
 
 .box1 {
-  background-image: url("https://www.conservation.org/SiteCollectionImages/ci_52272968.jpg?RenditionID=9");
+  background-image: url('public/water22.jpeg');
   background-size: cover;
+  // https://www.conservation.org/SiteCollectionImages/ci_52272968.jpg?RenditionID=9
 }
 
 .box2 {
-  background-image: url("http://www.lbeforum.org/wp-content/uploads/2014/03/water_lg.jpg");
+  background-image: url('public/water2.jpeg');
   background-size: cover;
+  // http://www.lbeforum.org/wp-content/uploads/2014/03/water_lg.jpg
 }
 
 .box3 {
-  background-image: url("https://media.istockphoto.com/videos/underwater-view-of-ocean-wave-video-id607535354?s=640x640");
+  background-image: url('public/water5.jpeg');
   background-size: cover;
+  // https://media.istockphoto.com/videos/underwater-view-of-ocean-wave-video-id607535354?s=640x640
 }
 
 .box4 {
-  background-image: url("https://news.theceomagazine.com/wp-content/uploads/2019/03/sea-coast-water-ocean-horizon-cloud-937679-pxhere.com_.jpg");
+  background-image: url('public/water27.jpeg');
   background-size: cover;
+  // https://news.theceomagazine.com/wp-content/uploads/2019/03/sea-coast-water-ocean-horizon-cloud-937679-pxhere.com_.jpg
 }
 
 .box5 {
-  background-image: url("https://previews.123rf.com/images/ranimirolotufoneto/ranimirolotufoneto1807/ranimirolotufoneto180700495/105983192-rippled-ocean-water-abstract-ocean-and-sea-water-texture.jpg");
+  background-image: url('public/water20.jpeg');
   background-size: cover;
+  // https://previews.123rf.com/images/ranimirolotufoneto/ranimirolotufoneto1807/ranimirolotufoneto180700495/105983192-rippled-ocean-water-abstract-ocean-and-sea-water-texture.jpg
 }
 
 .box6 {
-  background-image: url("http://www.wholesalesuppliesplus.com/Images/Products/2981-Ocean-Water-Fragrance.jpg");
+  background-image: url('public/water9.jpeg');
   background-size: cover;
+  // http://www.wholesalesuppliesplus.com/Images/Products/2981-Ocean-Water-Fragrance.jpg
 }
 
 .box7 {
-  background-image: url("https://cosmos-images2.imgix.net/file/spina/photo/12769/171114-npacific-full.jpg?ixlib=rails-2.1.4&auto=format&ch=Width%2CDPR&fit=max&w=835");
+  background-image: url('public/water1.jpeg');
   background-size: cover;
+  // https://cosmos-images2.imgix.net/file/spina/photo/12769/171114-npacific-full.jpg?ixlib=rails-2.1.4&auto=format&ch=Width%2CDPR&fit=max&w=835
 }
 
 .box8 {
-  background-image: url("http://iodine.news/wp-content/uploads/sites/103/2017/08/Ocean-Water-Wave-Art-Blue-Concept-Dark.jpg");
+  background-image: url('public/water19.jpeg');
   background-size: cover;
+  // http://iodine.news/wp-content/uploads/sites/103/2017/08/Ocean-Water-Wave-Art-Blue-Concept-Dark.jpg
 }
 
 .box9 {
-  background-image: url("https://i.pinimg.com/236x/79/b7/dc/79b7dcc1318ca0a24212fad7ab4a23c6.jpg");
+  background-image: url('public/water10.jpeg');
   background-size: cover;
+  // https://i.pinimg.com/236x/79/b7/dc/79b7dcc1318ca0a24212fad7ab4a23c6.jpg
 }
 
 nav {
   background-color: #34495E;
+  color: #fa8072;
 }
 
 #message {
   color: #34495E;
   font-size: 20px;
   text-align: center;
+  padding: 5px;
 }
 
 #message2 {
@@ -91,6 +107,7 @@ nav {
 }
 
 h1 {
+  font-family: 'Fredoka One', cursive;
   color: #34495E;
   text-align: center;
   padding: 10px;
@@ -100,26 +117,30 @@ h1 {
 #sign-up {
   text-align: center;
   padding: 10px;
-
+  color: #fa8072;
 }
 
 #sign-in {
   text-align: center;
   padding: 10px;
+  color: #fa8072;
 }
 
 #sign-out {
   text-align: center;
   padding: 10px;
+  color: #fa8072;
 }
 
 #change-password {
   text-align: center;
   padding: 10px;
+  color: #fa8072;
 }
 
 #footer {
   color: #34495E;
   text-align: center;
+  padding-top: 15px;
 
 }

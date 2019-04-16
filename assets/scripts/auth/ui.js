@@ -61,6 +61,7 @@ const signOutSuccess = function (data) {
   $('.row').hide()
   $('#reset').hide()
   $('#sign-out').hide()
+  $('#getGames').hide()
 
   store.user = null
 }
