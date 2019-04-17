@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <link href="https://fonts.googleapis.com/css?family=Fredoka+One|Open+Sans:300" rel="stylesheet">
+      <title>Tic-tac-toe</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body>
+
+    <nav>
+
+    <form id="sign-up">
+      <input type="email" name="credentials[email]" placeholder="Email" autocorrect="off" autocapitalize="off">
+      <input type="text" name="credentials[password]" placeholder="Password" autocorrect="off" autocapitalize="off">
+      <input type="text" name="credentials[password_confirmation]" placeholder="Password Confirmation" autocorrect="off" autocapitalize="off">
+      <input type="submit" value="Sign Up!">
+      <input type="reset" value="Reset">
+    </form>
+
+    <form id="sign-in">
+      <input type="email" name="credentials[email]" autocorrect="off" autocapitalize="off" placeholder="Email" required>
+      <input type="password" name="credentials[password]" placeholder="Password" autocorrect="off" autocapitalize="off">
+      <input type="submit" value="Sign In!">
+      <input type="reset" value="Reset">
+    </form>
+
+    <form id="change-password">
+      <input type="text" name="passwords[old]" placeholder="old password" autocorrect="off" autocapitalize="off">
+      <input type="text" name="passwords[new]" placeholder="new password" autocorrect="off" autocapitalize="off">
+      <input type="submit" value="change-password">
+      <input type="reset" value="Reset">
+    </form>
+
+    <form id="sign-out">
+      <input type="submit" value="Sign-Out!">
+    </form>
+
+    </nav>
+
+      <h1 class="game-name">Tic-Tac-Toe</h1>
+      <div id="reset">
+      <button id="reset">Create New Game!</button>
+    </div>
+      <div class="container">
+      <div class="row">
+      </div>
+        <div id="message">
+        </div>
+
+        <div class="row">
+          <div data-index="0" class="box box1 col-4 col-sm-4 col-md-4 col-lg-4"></div>
+          <div data-index="1" class="box box2 col-4 col-sm-4 col-md-4 col-lg-4"></div>
+          <div data-index="2" class="box box3 col-4 col-sm-4 col-md-4 col-lg-4"></div>
+</div>
+  <div class="row">
+          <div data-index="3" class="box box4 col-4 col-sm-4 col-md-4 col-lg-4"></div>
+          <div data-index="4" class="box box5 col-4 col-sm-4 col-md-4 col-lg-4"></div>
+          <div data-index="5" class="box box6 col-4 col-sm-4 col-md-4 col-lg-4"></div>
+</div>
+  <div class="row">
+          <div data-index="6" class="box box7 col-4 col-sm-4 col-md-4 col-lg-4"></div>
+          <div data-index="7" class="box box8 col-4 col-sm-4 col-md-4 col-lg-4"></div>
+          <div data-index="8" class="box box9 col-4 col-sm-4 col-md-4 col-lg-4"></div>
+      </div>
+
+</div>
+      <div id="getGames">
+      <button id="getGames">Games Played</button>
+    </div>
+      <div id="message2">
+      </div>
+<div id="footer">Created by Alice </div>
+    </body>
+</html>
